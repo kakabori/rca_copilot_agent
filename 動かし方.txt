@@ -1,0 +1,32 @@
+
+pip install fastapi uvicorn
+uvicorn app:app --reload
+
+
+
+curl -X POST http://127.0.0.1:8000/rca \
+  -H "Content-Type: application/json" \
+  -d '{
+    "asset_id": "ETCHER_01",
+    "timestamp": "2026-02-15T13:05:00Z",
+    "anomaly_score": 0.92,
+    "top_features": ["vibration", "pressure"]
+  }'
+
+
+
+ 次の“最小の進化”（おすすめ順）
+
+LLMを1箇所だけ入れる
+
+evaluate_hypothesis() の文章生成だけ
+
+
+trace_id / toolログを返す
+
+Agentic感が一気に上がる
+
+
+FastAPIでSwagger UIを見せる
+
+面接で即デモ可能
