@@ -29,26 +29,26 @@
 最小構成で「本番運用に耐える設計思想」を表現するため、次のレイヤに分割します。
 
 ```text
-┌--------------------------------------┐ 
-│ UI / API                             │
-│ - anomaly view / RCA result view     │
-└--------------------------------------┘
+┌──────────────────────────────────────┐
+│ UI / API                              │
+│ - anomaly view / RCA result view      │
+└──────────────────────────────────────┘
                     │
-┌------------------▼------------------┐
-│ RCA Copilot Agent                    │
-│ - Hypothesis Generator               │
-│ - Evidence Collector                 │
-│ - Hypothesis Evaluator               │
-│ - Decision Brief Builde              │
-└─────────┬─────────┘
+┌───────────────────▼──────────────────┐
+│ RCA Copilot Agent                     │
+│ - Hypothesis Generator                │
+│ - Evidence Collector                  │
+│ - Hypothesis Evaluator                │
+│ - Decision Brief Builder              │
+└───────────────────┬──────────────────┘
                     │
-┌─────────▼─────────┐
-│ Context & Data Access Layer          │
-│ - time-series query                  │
-│ - maintenance/work order query       │
-│ - doc search (RAG)                   │
-│ - asset relations (graph/edge table) │
-└───────────────────┘
+┌───────────────────▼──────────────────┐
+│ Context & Data Access Layer           │
+│ - time-series query                   │
+│ - maintenance/work order query        │
+│ - doc search (RAG)                    │
+│ - asset relations (graph/edge table)  │
+└──────────────────────────────────────┘
 ```
 
 > 詳細設計は `docs/` に切り出します（READMEでは「導線」重視）。
