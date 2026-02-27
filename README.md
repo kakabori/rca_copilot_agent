@@ -9,8 +9,6 @@
 **根拠（Evidence）・弱点（Counter Evidence）・不確実性（Confidence / Uncertainty）** を付与して、
 現場の意思決定を強化します（Human-in-the-loop）。
 
----
-
 ## 2. Problem Statement（なぜ作るか）
 異常検知／予知保全モデルは「いつもと違う」を定量化できますが、製造現場の意思決定
 （特にライン停止のような高コスト判断）に必要なものは、スコア単体ではなく以下です。
@@ -22,8 +20,6 @@
 そこで本プロジェクトでは、異常イベントを「単一の答え」にせず、
 **競合する複数仮説**として扱い、データに基づいた根拠を構造化して提示する 
 **RCA Copilot Agent** を設計・実装します。
-
----
 
 ## 3. High-level Architecture（全体構成）
 最小構成で「本番運用に耐える設計思想」を表現するため、次のレイヤに分割します。
@@ -52,8 +48,6 @@
 ```
 
 > 詳細設計は `docs/` に切り出します（READMEでは「導線」重視）。
-
----
 
 ## 4. Agent Responsibilities（Agentの役割：Input / Output / 目的）
 ### 4.1 Input（入力）
@@ -125,8 +119,6 @@
 }
 ```
 
----
-
 ## 5. Minimal Data Model（最小データモデル：ダミーで再現）
 本プロジェクトは大規模データを前提にしませんが、
 **製造業の現実に必要な“データの種類”**を揃えます。
@@ -137,8 +129,6 @@
 - Documents：手順書・障害報告（Markdown/PDF→テキスト化）
 - Relations：asset↔sensor、asset↔work_order、work_order↔doc（edge table）
 
----
-
 ## 6. Why this matters（このポートフォリオで示したいこと）
 本プロジェクトは「高精度モデルの実装」ではなく、以下を示すことを目的とします。
 
@@ -147,17 +137,21 @@
 - Human-in-the-loop を前提に、責任境界と運用を設計できる
 - 自作を通じて、Cognite / Databricks 等のデータプラットフォームがどこで効くか（文脈化、評価、運用、スケール）”を説明できる
 
----
-
 ## 7. Use Cases（想定ユースケース）
 
 - 半導体製造装置の異常時：RCA / 初動切り分け支援
 - 保全エンジニア向け：根拠付き判断材料の提示
 - 誤判断が許されない現場での：説明責任・監査を意識した設計
 
----
-
 ## 8. Positioning（面接・職務経歴書向けの一言）
 本プロジェクトは、異常検知の精度改善ではなく、異常を“解釈”して意思決定に耐える根拠を
 構造化するRCA Copilot Agent を実装する試みである。
 （自動停止は行わず、Human-in-the-loop と説明責任を前提とする。）
+
+## 9. Quick Demo (PowerShell)
+
+```powershell
+pwsh .\scripts\call_rca.ps1
+```
+
+This sends a sample anomaly event to /rca and returns a structured RCA decision brief.
