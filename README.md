@@ -35,19 +35,19 @@
 └──────────────────────────────────────┘
                     │
 ┌───────────────────▼──────────────────┐
-│ RCA Copilot Agent                     │
-│ - Hypothesis Generator                │
-│ - Evidence Collector                  │
-│ - Hypothesis Evaluator                │
-│ - Decision Brief Builder              │
+│ RCA Copilot Agent                    │
+│ - Hypothesis Generator               │
+│ - Evidence Collector                 │
+│ - Hypothesis Evaluator               │
+│ - Decision Brief Builder             │
 └───────────────────┬──────────────────┘
                     │
 ┌───────────────────▼──────────────────┐
-│ Context & Data Access Layer           │
-│ - time-series query                   │
-│ - maintenance/work order query        │
-│ - doc search (RAG)                    │
-│ - asset relations (graph/edge table)  │
+│ Context & Data Access Layer          │
+│ - time-series query                  │
+│ - maintenance/work order query       │
+│ - doc search (RAG)                   │
+│ - asset relations (graph/edge table) │
 └──────────────────────────────────────┘
 ```
 
