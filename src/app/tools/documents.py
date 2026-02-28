@@ -1,4 +1,4 @@
-def search_documents(asset_id: str):
+def search_documents(asset_id: str) -> list[str]:
     """
     文書検索（ダミー）
     """

@@ -1,4 +1,4 @@
-def get_maintenance(asset_id: str):
+def get_maintenance(asset_id: str) -> dict:
     """
     保全履歴取得（ダミー）
     """

@@ -1,0 +1,5 @@
+fastapi>=0.133.1
+ipython>=9.10.0
+pandas>=3.0.1
+pytest>=9.0.2
+uvicorn>=0.41.0

@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def get_timeseries(asset_id: str):
+def get_timeseries(asset_id: str) -> pd.DataFrame:
     """
     時系列データ取得（ダミー）
     """
